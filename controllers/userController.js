@@ -10,11 +10,14 @@ export const submit = async (req, res) => {
       language,
     });
 
-    res.status(201).json({ status: 201, message: "✅ New Register", person });
+    // Download Rhapsody
+    res.download(`./downloads/${language}.pdf`);
+
+    // res.status(201).json({ status: 201, message: "✅ New Register", person });
   } catch (error) {
     res.status(400).json({
       status: 400,
-      message: "❌ Failed to create new user",
+      message: "❌ Failed to register",
       data: error,
       // message: error.message,
     });
