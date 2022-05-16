@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 //allows servers to specify not only who can access the assets, but also how they can be accessed
 app.use(
   cors({
-    origin: "*", // restrict calls to those this address
+    origin: "https://spring-feast.vercel.app/", // restrict calls to those this address
     methods: "GET,PUT,PATCH,POST,DELETE", // only allow GET requests
   })
 );

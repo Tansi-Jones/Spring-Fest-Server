@@ -10,8 +10,6 @@ export const submit = async (req, res) => {
       language,
     });
 
-    res.header("Access-Control-Allow-Origin", "*");
-
     // Download Rhapsody
     res.download(`./downloads/${language}.pdf`);
 
